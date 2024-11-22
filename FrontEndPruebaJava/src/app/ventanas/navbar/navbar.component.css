@@ -1,0 +1,25 @@
+
+    mat-toolbar-row{
+        background-color: black;
+    }
+    
+    mat-toolbar{
+        height: 50px;
+        background-color: #3f51b5;
+    }
+    
+    #lista{
+        height: 50px;
+        color: white;
+        background-color: black;
+    }
+    
+    #registrar{
+        height: 50px;
+        width: 200px;
+        color: white;
+        background-color: black;
+    }
+    mat-icon{
+        margin-right: 3px;
+    }

@@ -1,0 +1,18 @@
+<h2 class="text-center">Lista De Tareas</h2>
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Fecha de inicio</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let tarea of tareas">
+            <td>{{tarea.nombre}}</td>
+            <td>{{tarea.descripcion}}</td>
+            <td>{{tarea.fecha}}</td>
+        </tr>
+    </tbody>
+</table>
+

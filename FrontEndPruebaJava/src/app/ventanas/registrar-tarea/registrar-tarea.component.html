@@ -1,0 +1,39 @@
+<body>
+    <div class="wrapper">
+        <form [formGroup]="registerForm">
+            <p class="text-danger">{{registroError}}</p>
+            <h1>Registro de Tareas</h1>
+
+            <div class="input-box">
+                <input type="text" placeholder="Nombre" formControlName="nombre" class="form-control" required>
+                <div *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)" class="text-danger">
+                  <div *ngIf="nombre.errors?.['required']">
+                    El Nombre es requerido.
+                  </div>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <input type="text" placeholder="Descripcion" formControlName="descripcion" class="form-control" required>
+                <div *ngIf="descripcion.invalid && (descripcion.dirty || descripcion.touched)" class="text-danger">
+                  <div *ngIf="descripcion.errors?.['required']">
+                    La descripción es requerida.
+                  </div>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <input type="date" placeholder="Fecha de Inicio" formControlName="fecha" class="form-control" required>
+                <div *ngIf="fecha.invalid && (fecha.dirty || fecha.touched)" class="text-danger">
+                  <div *ngIf="fecha.errors?.['required']">
+                    La Fecha es requerida
+                  </div>
+                </div>
+            </div>
+    
+            <button type="submit" (click)="registrarTarea()" class="btn btn-primary">Aceptar</button>
+
+        </form>
+    </div>
+</body>
+
